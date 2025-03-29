@@ -33,42 +33,42 @@
     };
 
  behaviors {
-        l1t: tap_dance_mod_tap {
+        l1t: l1t {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo 1>, <&l1ls>;
         };
 
-        gl1t: tap_dance_mod_tap {
+        gl1t: g1lt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LGUI>, <&l1lg>;
         };
 
-        qu2qut: tap_dance_mod_tap {
+        qu2qut: qu2qut {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp SQT>, <&kp LS(SQT)>;
         };
 
-        semi2col: tap_dance_mod_tap {
+        semi2col: semi2col {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp SEMI>, <&kp LS(SEMI)>;
         };
 
-        lcurly2lsquare: tap_dance_mod_tap {
+        lcurly2lsquare: lcurly2lsquare {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LS(LBKT)>, <&kp LBKT>;
         };
 
-        rcurly2rsquare: tap_dance_mod_tap {
+        rcurly2rsquare: rcurly2rsquare {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
