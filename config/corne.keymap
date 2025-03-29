@@ -8,26 +8,26 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    macros {
-        ltgui: ltgui {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_press>,
-                <&mo 1>;
-
-            label = "LTGUI";
-        };
-    };
+    /* macros { */
+    /*     ltgui: ltgui { */
+    /*         compatible = "zmk,behavior-macro"; */
+    /*         #binding-cells = <0>; */
+    /*         bindings = */
+    /*             <&macro_press>, */
+    /*             <&kp LGUI>, */
+    /*             <&macro_press>, */
+    /*             <&mo 1>; */
+    /**/
+    /*         label = "LTGUI"; */
+    /*     }; */
+    /* }; */
 
     behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&lt 1>, <&lt LS(1)>, <&lt LG(1)>;
+            bindings = <&kp N1>, <&kp N2>, <&kp N3>;
         };
     };
 
