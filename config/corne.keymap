@@ -74,6 +74,27 @@
             tapping-term-ms = <200>;
             bindings = <&kp LS(RBKT)>, <&kp RBKT>;
         };
+
+        dot2greater: dot2greater {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DOT>, <&kp LS(DOT)>;
+        };
+
+        comma2less: comma2less {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp COMMA>, <&kp LS(COMMA)>;
+        };
+				
+        slash2question: slash2question {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FSLSH>, <&kp LS(FSLSH)>;
+        };
     };
 
     keymap {
@@ -88,10 +109,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB              &kp Q  &kp W  &kp E     &kp R   &kp T              &kp Y      &kp U  &kp I      &kp O    &kp P     &kp DELETE
-&mt LCTRL BACKSPACE  &kp A  &kp S  &kp D     &kp F   &kp G              &kp H      &kp J  &kp K      &kp L    &semi2col  &qu2qut
-&kp LSHFT            &kp Z  &kp X  &kp C     &kp V   &kp B              &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                   &gl1t  &l1t  &kp BACKSPACE    &kp SPACE  &mo 3  &kp RALT
+&kp TAB              &kp Q  &kp W  &kp E     &kp R   &kp T              &kp Y      &kp U  &kp I        &kp O         &kp P            &kp DELETE
+&mt LCTRL ESC        &kp A  &kp S  &kp D     &kp F   &kp G              &kp H      &kp J  &kp K        &kp L         &semi2col        &qu2qut
+&kp LSHFT            &kp Z  &kp X  &kp C     &kp V   &kp B              &kp N      &kp M  &comma2less  &dot2greater  &slash2question  &kp RIGHT_SHIFT
+                                   &gl1t  &l1t  &kp BACKSPACE    &kp SPACE  &kp ENTER &kp RALT
             >;
         };
 
@@ -104,10 +125,10 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &kp N1  &kp N2     &kp N3    &kp N4        &kp N5               &kp N6         &kp N7    &kp N8     &kp N9     &kp N0  &trans
-&trans  &trans  &kp COMMA  &kp DOT   &kp LS(N9)    &kp LS(N0)           &kp LEFT       &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
-&trans  &trans  &kp FSLH   &kp BSLH  &lcurly2lsquare  &rcurly2rsquare         &kp LBKT       &kp RBKT  &kp MINUS  &kp EQUAL  &trans  &trans
-                           &trans    &trans        &kp LA(BACKSPACE)    &kp LG(SPACE)  &trans    &trans
+&trans  &kp N1  &kp N2     &kp N3    &kp N4           &kp N5             &kp N6         &kp N7    &kp N8     &kp N9     &kp N0  &trans
+&trans  &trans  &kp COMMA  &kp DOT   &lcurly2lsquare  &rcurly2rsquare    &kp LEFT       &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
+&trans  &trans  &kp FSLH   &kp BSLH  &kp LS(N9)  	    &kp LS(N0)         &trans 			  &trans    &kp MINUS  &kp EQUAL  &trans  &trans
+                           &trans    &trans        &trans    &trans  &trans    &trans
             >;
         };
 
