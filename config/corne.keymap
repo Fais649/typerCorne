@@ -36,7 +36,7 @@
         l1t: l1t {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <400>;
             bindings = <&kp ESC>, <&l1ls>;
         };
 
@@ -64,14 +64,14 @@
         lcurly2lsquare: lcurly2lsquare {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&kp LS(LBKT)>, <&kp LBKT>;
         };
 
         rcurly2rsquare: rcurly2rsquare {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&kp LS(RBKT)>, <&kp RBKT>;
         };
 
@@ -95,6 +95,13 @@
             tapping-term-ms = <200>;
             bindings = <&kp FSLH>, <&kp LS(FSLH)>;
         };
+
+				gresc: grave_escape {
+						compatible = "zmk,behavior-mod-morph";
+						#binding-cells = <0>;
+						bindings = <&kp ESC>, <&kp GRAVE>;
+						mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+				};
     };
 
     keymap {
@@ -112,7 +119,7 @@
 &kp TAB              &kp Q  &kp W  &kp E     &kp R   &kp T              &kp Y      &kp U     &kp I        &kp O         &kp P            &kp DELETE
 &mt LCTRL ESC        &kp A  &kp S  &kp D     &kp F   &kp G              &kp H      &kp J     &kp K        &kp L         &semi2col        &qu2qut
 &kp LSHFT            &kp Z  &kp X  &kp C     &kp V   &kp B              &kp N      &kp M     &comma2less  &dot2greater  &slash2question  &kp RIGHT_SHIFT
-                                   &gl1t     &l1t    &lt 1 BACKSPACE    &kp SPACE  &kp ENTER &kp RALT
+                                   &gl1t     &l1t    &lt 1 BACKSPACE    &kp SPACE  &kp TAB   &mt LALT ENTER
             >;
         };
 
@@ -125,10 +132,10 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &kp N1  &kp N2     &kp N3      &kp N4             &kp N5               &kp N6            &kp N7    &kp N8     &kp N9     &kp N0  &trans
-&trans  &trans  &kp MINUS  &kp EQUAL   &lcurly2lsquare    &rcurly2rsquare      &kp LEFT          &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
-&trans  &trans  &trans     &trans      &kp LS(N9)  	      &kp LS(N0)           &kp FSLH          &trans    &trans     &trans     &trans  &trans
-                           &trans      &trans             &trans               &trans            &trans    &trans
+&trans  &kp N1  &kp N2     &kp N3      &kp F1             &kp F2               &kp F3            &kp F4    &kp N8     &kp N9     &kp N0  &kp F12
+&trans  &kp N4  &kp N5     &kp N6      &lcurly2lsquare    &rcurly2rsquare      &kp LEFT          &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
+&trans  &kp N7  &kp N8     &kp N9      &kp LS(N9)  	      &kp LS(N0)           &kp MINUS          &kp EQUAL    &trans     &trans     &trans  &trans
+                           &kp N0      &trans             &trans               &trans            &trans    &trans
             >;
         };
 
