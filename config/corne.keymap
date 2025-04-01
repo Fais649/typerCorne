@@ -15,27 +15,27 @@
 
 / {
     macros {
-        l1ls: l1ls {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-							 <&macro_press &mo 1 &kp LSHFT>
-							, <&macro_pause_for_release>
-							, <&macro_release &mo 1 &kp LSHFT>;
+							/*  l1ls: l1ls { */
+							/*      compatible = "zmk,behavior-macro"; */
+							/*      #binding-cells = <0>; */
+							/*      bindings = */
+							/*  <&macro_press &mo 1 &kp LSHFT> */
+							/* , <&macro_pause_for_release> */
+							/* , <&macro_release &mo 1 &kp LSHFT>; */
+							/**/
+							/*      label = "Layer1+LSHIFT"; */
+							/*  }; */
 
-            label = "Layer1+LSHIFT";
-        };
-
-        l1lg: l1lg {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-							 <&macro_press &kp LGUI &st 1>
-							, <&macro_pause_for_release>
-							, <&macro_release &kp LGUI &st 1>;
-
-            label = "Layer1+LGUI";
-        };
+							/*  l1lg: l1lg { */
+							/*      compatible = "zmk,behavior-macro"; */
+							/*      #binding-cells = <0>; */
+							/*      bindings = */
+							/*  <&macro_press &kp LGUI &st 1> */
+							/* , <&macro_pause_for_release> */
+							/* , <&macro_release &kp LGUI &st 1>; */
+							/**/
+							/*      label = "Layer1+LGUI"; */
+							/*  }; */
     };
 
  behaviors {
