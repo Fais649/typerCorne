@@ -46,12 +46,12 @@
         /*     bindings = <&l1ls>, <&kp ESC>; */
         /* }; */
 
-        gl1t: gl1t {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <400>;
-            bindings = <&kp LGUI>, <&l1lg>;
-        };
+        /* gl1t: gl1t { */
+        /*     compatible = "zmk,behavior-tap-dance"; */
+        /*     #binding-cells = <0>; */
+        /*     tapping-term-ms = <400>; */
+        /*     bindings = <&kp LGUI>, <&l1lg>; */
+        /* }; */
 
  am: auto_mod {
             compatible = "zmk,behavior-hold-tap";
