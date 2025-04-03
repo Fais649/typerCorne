@@ -11,7 +11,7 @@
 #define RAS(keycode) &am keycode LS(keycode)    
 #define AG(keycode) &am LG(keycode) keycode     
 
-#define AA(modded, keycode) &am moded keycode     
+#define AA(modded, keycode) &am modded keycode     
 
 #define RAG(keycode) &am keycode LG(keycode)     
 #define ST(keycode, layer) &st keycode layer      
