@@ -103,7 +103,7 @@
 
             display-name = "Lower";
             bindings = <
-&trans  AS(N1)   AS(N2)     AS(N3)     AA(LG(N1), F1)             AA(LG(N2), F2)               &kp F3            &kp F4    &kp N8     &kp N9     &kp N0  &kp F12
+&trans  AS(N1)   AS(N2)     AS(N3)     AA(LG(N1), F1)             AA(LG(N2), F2)       AA(LG(N3), F3)            AA(LG(N4), F4)    &kp N8     &kp N9     &kp N0  &kp F12
 &trans  AS(N4)  &kp AS(N5)     &kp AS(N6)      RAS(LBKT)          RAS(RBKT)            &kp LEFT          &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
 &trans  &kp AS(N7)  &kp AS(N8)     &kp AS(N9)      &kp LS(N9)  	      &kp LS(N0)       &kp AS(MINUS)         &kp AS(EQUAL) &trans     &trans     AS(BSLH)  &trans
                            &kp AS(N0)      &trans             &trans               &trans            &trans    &trans
