@@ -10,7 +10,9 @@
 #define AS(keycode) &am LS(keycode) keycode    
 #define RAS(keycode) &am keycode LS(keycode)    
 #define AG(keycode) &am LG(keycode) keycode     
-#define A(modded, keycode) &am moded keycode     
+
+#define AA(modded, keycode) &am moded keycode     
+
 #define RAG(keycode) &am keycode LG(keycode)     
 #define ST(keycode, layer) &st keycode layer      
 
@@ -44,7 +46,7 @@
 							#binding-cells = <0>;
 							bindings =
 									 <&macro_tap &sl 1>
-									, <&macro_tap &sk LGUI>
+									, <&macro_tap &sk LGUI>;
 						};
     };
 
@@ -97,7 +99,7 @@
 
             display-name = "Lower";
             bindings = <
-&trans  AG(N1)   AG(N2)     AG(N3)     A(LG(N1), F1)             A(LG(N2), F2)               &kp F3            &kp F4    &kp N8     &kp N9     &kp N0  &kp F12
+&trans  AG(N1)   AG(N2)     AG(N3)     AA(LG(N1), F1)             AA(LG(N2), F2)               &kp F3            &kp F4    &kp N8     &kp N9     &kp N0  &kp F12
 &trans  AG(N4)  &kp N5     &kp N6      RAS(LBKT)          RAS(RBKT)            &kp LEFT          &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
 &trans  &kp N7  &kp N8     &kp N9      &kp LS(N9)  	      &kp LS(N0)           &kp MINUS         &kp EQUAL &trans     &trans     AS(BSLH)  &trans
                            &kp N0      &trans             &trans               &trans            &trans    &trans
