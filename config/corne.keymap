@@ -28,11 +28,13 @@
 /*             bindings = <HOLD>, <TAP>; \ */
 /*         }; */
 		
+
+/ {
+
 &lt {
     quick-tap-ms = <250>;
 };
 
-/ {
     macros {
 							/*  l1ls: l1ls { */
 							/*      compatible = "zmk,behavior-macro"; */
