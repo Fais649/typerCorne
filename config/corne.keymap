@@ -88,7 +88,7 @@
             bindings = <
 &trans  &trans  &trans     &trans     &trans     &trans        &trans     &trans       &trans     &trans     &trans  				  &bt BT_PRV
 &trans  &trans  &trans     &trans     &trans     &trans        &kp LEFT          &kp DOWN              &kp UP     &kp RIGHT  &trans   &bt BT_NXT
-&trans  &trans  &trans     &trans     &trans     &trans        &trans         &trans             &trans     &trans     		 &trans   &bt BT_CLT
+&trans  &trans  &trans     &trans     &trans     &trans        &trans         &trans             &trans     &trans     		 &trans   &bt BT_CLR
                            &trans      &trans             &none               &none            &trans                &trans
             >;
         };
@@ -99,6 +99,7 @@
     };
 };
 
+		
 // V1
 /* #define AS(keycode) &am LS(keycode) keycode     */
 /* #define RAS(keycode) &am keycode LS(keycode)     */
