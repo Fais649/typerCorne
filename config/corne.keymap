@@ -6,6 +6,8 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
 
 // V2 (latest)
 #define AS(keycode) &am LS(keycode) keycode    
@@ -84,9 +86,9 @@
         raise_layer {
             display-name = "util;";
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans        &trans     &trans       &trans     &trans     &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans        &kp LEFT          &kp DOWN              &kp UP     &kp RIGHT  &trans   &trans
-&trans  &trans  &trans     &trans     &trans     &trans        &trans         &trans             &trans     &trans     &trans &trans
+&trans  &trans  &trans     &trans     &trans     &trans        &trans     &trans       &trans     &trans     &trans  				  &bt BT_PRV
+&trans  &trans  &trans     &trans     &trans     &trans        &kp LEFT          &kp DOWN              &kp UP     &kp RIGHT  &trans   &bt BT_NXT
+&trans  &trans  &trans     &trans     &trans     &trans        &trans         &trans             &trans     &trans     		 &trans   &bt BT_CLT
                            &trans      &trans             &none               &none            &trans                &trans
             >;
         };
