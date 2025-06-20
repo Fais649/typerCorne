@@ -86,7 +86,7 @@
         raise_layer {
             display-name = "move;";
             bindings = <
-&trans  &trans  &trans     &trans     &kp LS(MINUS)     &LS(EQUAL)        &kp F1     &kp F2       &kp F3     &kp F4     &kp F11  				  &kp F12
+&trans  &trans  &trans     &trans     &kp LS(MINUS)     &kp LS(EQUAL)        &kp F1     &kp F2       &kp F3     &kp F4     &kp F11  				  &kp F12
 &trans  &trans  &trans     &trans     &kp LBKT     &kp RBKT        &kp LEFT          &kp DOWN              &kp UP     &kp RIGHT  &trans   &trans
 &trans  &trans  &trans     &trans     &trans     &trans        &trans         &trans             &trans     &trans     		 &trans   &trans
                            &trans      &trans             &clt 3 BACKSPACE               &trans            &trans                &trans
