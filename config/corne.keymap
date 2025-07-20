@@ -59,6 +59,12 @@
             tapping-term-ms = <200>;
             bindings = <&kp TILDE>, <&tog 1>;
         };
+        shftcap: tap_dance_shift_cap {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHIFT>,  <&kp CAPS>;
+        };
 		};
 
     keymap {
@@ -69,12 +75,11 @@
             // | C|  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
             display-name = "core;";
             bindings = <
 &kp LCTRL              &kp Q  &kp W  &kp E     &kp R   &kp T              &kp Y               &kp U         &kp I        &kp O         &kp P     &tog1
 &kp LALT        			 &kp A  &kp S  &kp D     &kp F   &kp G              &kp H               &kp J         &kp K        &kp L         AS(SEMI)  AS(SQT)
-&mt LSHIFT CAPSLOCK            &kp Z  &kp X  &kp C     &kp V   &kp B              &kp N               &kp M         AS(COMMA)    AS(DOT)       AS(FSLH)  &mt RIGHT_SHIFT CAPSLOCK
+&shftcap            &kp Z  &kp X  &kp C     &kp V   &kp B              &kp N               &kp M         AS(COMMA)    AS(DOT)       AS(FSLH)  &shftcap
 		 							   &kp LGUI   &mt LCTRL ESC        &clt 1 BACKSPACE   &clt 2 SPACE           &mt RALT TAB  &kp ENTER
             >;
         };
