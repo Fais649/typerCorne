@@ -89,7 +89,7 @@
 &kp ESC           &kp Q  &kp W  &kp E     &kp R   &kp T                &kp Y                 &kp U           &kp I        &kp O         &kp P     &kp BACKSPACE
 &kp TAB        		&kp A  &kp S  &kp D     &kp F   &kp G               &kp H									&kp J           &kp K        &kp L         AS(SEMI)  AS(SQT)
 &mt LSHIFT LS(LBKT)     &kp Z  &kp X  &kp C     &kp V   &kp B           &kp N               &kp M           AS(COMMA)    AS(DOT)       AS(FSLH)  &mt RSHIFT ENTER
-		 							  &mt LGUI DOWN &mlt LALT LEFT   &clt 1 SPACE         &clt 2 SPACE  &mlt RCTRL RIGHT &mt RGUI UP
+		 							  &mlt LGUI DOWN &mlt LALT LEFT   &clt 1 SPACE         &clt 2 SPACE  &mlt RCTRL RIGHT &mlt RGUI UP
             >;
         };
 
