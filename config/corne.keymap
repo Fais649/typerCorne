@@ -88,8 +88,8 @@
             bindings = <
 &kp ESC           &kp Q  &kp W  &kp E     &kp R   &kp T                &kp Y                 &kp U           &kp I        &kp O         &kp P     &kp BACKSPACE
 &kp TAB        		&kp A  &kp S  &kp D     &kp F   &kp G               &kp H									&kp J           &kp K        &kp L         AS(SEMI)  AS(SQT)
-&mt LSHIFT LS(LBKT)     &kp Z  &kp X  &kp C     &kp V   &kp B           &kp N               &kp M           AS(COMMA)    AS(DOT)       AS(FSLH)  &mt RSHIFT ENTER
-		 							  &mlt LGUI DOWN &mlt LALT LEFT   &clt 1 SPACE         &clt 2 SPACE  &mlt RCTRL RIGHT &mlt RGUI UP
+&kp LSHIFT     &kp Z  &kp X  &kp C     &kp V   &kp B           &kp N               &kp M           AS(COMMA)    AS(DOT)       AS(FSLH)  &mt RSHIFT ENTER
+		 							  &mlt LGUI DOWN &mlt LALT LEFT   &mlt LCTRL SPACE         &clt 1 SPACE  &mlt RCTRL RIGHT &mlt RGUI UP
             >;
         };
 
@@ -97,9 +97,9 @@
             display-name = "sym;";
             bindings = <
 &kp TILDE  &kp LG(N1)  &kp LG(N2)     &kp N1      &kp N2         &kp N3               &kp F1  &kp F2  		   &kp F3     &kp F4     &kp EQUAL   &kp MINUS   
-&trans  &kp LG(N3)  &kp LG(N4)     &kp N4      &kp N5         &kp N6							 &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans   &trans
+&trans  &kp LG(N3)  &kp LG(N4)     &kp N4      &kp N5         &kp N6							 RAS(LBKT)   &kp LS(N9)   &kp LS(N0)     RAS(RBKT)  &trans   &trans
 &trans  &trans      &trans         &kp N7      &kp N8         &kp N9							 &kp F10  &kp F11  		   &kp F12  &trans     &trans   &trans   
-																	 &kp N0      &trans         &trans               &trans  &kp LG(TAB)   AS(N0)
+																	 &kp N0      &trans         &trans               &trans  &trans   &trans
             >;
         };
 
