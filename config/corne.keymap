@@ -45,8 +45,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-						tapping-term-ms = <150>;
-		  			quick_tap_ms = <250>;
+						tapping-term-ms = <125>;
+		  			quick_tap_ms = <200>;
             bindings = <&kp>, <&kp>;
             display-name = "Layer-Tap";
         };
@@ -97,7 +97,7 @@
 &kp TILDE  &trans  &trans     &kp N1      &kp N2         &kp N3										 &kp F1  &kp F2  		   &kp F3     &kp F4     &kp F11   &kp F12
 &kp BSLH  &kp LS(BSLH)  &trans     &kp N4      &kp N5         &kp N6							 RAS(LBKT)   &kp LS(N9)   &kp LS(N0)     RAS(RBKT)  &kp LS(EQUAL)   &kp EQUAL
 &trans  &trans      &trans         &kp N7      &kp N8         &kp N9							 &kp TILDE  &trans   	&trans  &trans     &trans   &trans   
-																	 &kp N0      &trans         &trans               &trans  &trans   &trans
+																	 &kp N0      &trans         &clt 3 SPACE               &trans  &trans   &trans
             >;
         };
 
@@ -115,7 +115,7 @@
             display-name = "util;";
             bindings = <
 &trans  &trans  &trans     &trans      &trans     &trans            &trans     &trans       &trans     &trans     &trans  	&bt BT_PRV
-&trans  &trans  &trans     &trans      &trans     &trans            &kp LEFT   &kp DOWN     &kp UP     &kp RIGHT  &trans    &bt BT_NXT
+&trans  &trans  &trans     &trans      &trans     &trans            &trans   &trans     &trans     &trans  &trans    &bt BT_NXT
 &trans  &trans  &trans     &trans      &trans     &trans            &trans     &trans       &trans     &trans     &trans    &bt BT_CLR
                            &trans      &trans     &trans            &trans     &trans       &trans
             >;
