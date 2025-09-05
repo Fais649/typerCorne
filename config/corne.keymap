@@ -23,6 +23,30 @@
     };
 
 		behaviors {
+		 hml: home_row_mod_left {
+					compatible = "zmk,behavior-hold-tap";
+					#binding-cells = <2>;
+					flavor = "balanced";
+					require-prior-idle-ms = <150>;
+					tapping-term-ms = <280>;
+					quick-tap-ms = <175>;
+					bindings = <&kp>, <&kp>;
+					/* hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard */
+					hold-trigger-on-release;
+			};
+
+			hmr: home_row_mod_right {
+					compatible = "zmk,behavior-hold-tap";
+					#binding-cells = <2>;
+					flavor = "balanced";
+					require-prior-idle-ms = <150>;
+					tapping-term-ms = <280>;
+					quick-tap-ms = <175>;
+					bindings = <&kp>, <&kp>;
+					/* hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard */
+					hold-trigger-on-release;
+			};
+
 			am: auto_mod {
 					compatible = "zmk,behavior-hold-tap";
 					#binding-cells = <2>;
@@ -63,7 +87,7 @@
             display-name = "core;";
             bindings = <
 &kp ESC           &kp Q  &kp W  &kp E     &kp R   &kp T                &kp Y                 &kp U           &kp I        &kp O         &kp P     &kp BACKSPACE
-&clt 1 TAB        		&kp A  &kp S  &kp D     &kp F   &kp G               &kp H									&kp J           &kp K        &kp L         &kp SEMI  &clt 1 SQT 
+&clt 1 TAB        		&kp A  &hml LGUI S  &hml LALT D     &hml LCTRL F   &hml LSHIFT G               &hmr RSHIFT H									&hmr RCTRL J           &hmr RALT K        &hmr RGUI L         &kp SEMI  &clt 1 SQT 
 &mlt LSHIFT MINUS     &kp Z  &kp X  &kp C     &kp V   &kp B           &kp N               &kp M           &kp COMMA    &kp DOT       &kp FSLH  &mlt RSHIFT ENTER
 		 							  &mlt LGUI LEFT &mlt LALT DOWN   &mlt LCTRL SPACE         &mlt RCTRL SPACE  &mlt RALT UP &mlt RGUI RIGHT
             >;
