@@ -9,11 +9,11 @@
 
 #define AS(keycode) &am LS(keycode) keycode
 
-#define LSUPER() LS(LC(LALT))
-#define RSUPER() RS(RC(RALT))
+#define LSUPER LS(LC(LALT))
+#define RSUPER RS(RC(RALT))
 
-#define LHYPER() LS(LC(LG(LALT)))
-#define RHYPER() RS(RC(RG(RALT)))
+#define LHYPER LS(LC(LG(LALT)))
+#define RHYPER RS(RC(RG(RALT)))
 
 /* #define RAS(keycode) &am keycode LS(keycode) */
 /* #define AG(keycode) &am LG(keycode) keycode */
@@ -98,7 +98,7 @@
 &kp ESC           &kp Q  &kp W  &kp E     &kp R   &kp T														  &kp Y	  &kp U    &kp I        &kp O         &kp P     &kp BACKSPACE
 &clt 1 TAB        &hml LSHFT A  &hml LGUI S  &hml LALT D     &hml LCTRL F   &kp G 		  &kp H		&hmr RCTRL J           &hmr RALT K    &hmr RGUI L  &hmr RSHFT SEMI  &clt 1 SQT 
 &kp MINUS					&kp Z  &kp X	&kp C			&kp V   &kp B															&kp N		&kp M    &kp COMMA    &kp DOT       &kp FSLH  &kp ENTER
-																&hml LHYPER() LEFT  &kp DOWN  &hml LSUPER() SPACE												&hmr RSUPER() SPACE  &kp UP &hmr RHYPER() RIGHT
+																&hml LHYPER LEFT  &kp DOWN  &hml LSUPER SPACE												&hmr RSUPER SPACE  &kp UP &hmr RHYPER RIGHT
             >;
         };
 
