@@ -7,7 +7,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-/* #define AS(keycode) &am LS(keycode) keycode */
+#define AS(keycode) &am LS(keycode) keycode
 /* #define RAS(keycode) &am keycode LS(keycode) */
 /* #define AG(keycode) &am LG(keycode) keycode */
 
@@ -47,16 +47,6 @@
 					hold-trigger-on-release;
 			};
 
-			hm: home_row_mod {
-					compatible = "zmk,behavior-hold-tap";
-					#binding-cells = <2>;
-					flavor = "balanced";
-					require-prior-idle-ms = <180>;
-					tapping-term-ms = <280>;
-					quick-tap-ms = <250>;
-					bindings = <&kp>, <&kp>;
-					hold-trigger-on-release;
-			};
 
 			am: auto_mod {
 					compatible = "zmk,behavior-hold-tap";
@@ -99,19 +89,19 @@
             display-name = "core;";
             bindings = <
 &kp ESC           &kp Q  &kp W  &kp E     &kp R   &kp T														  &kp Y	  &kp U    &kp I        &kp O         &kp P     &kp BACKSPACE
-&clt 1 TAB        &hm LSHFT A  &hm LGUI S  &hm LALT D     &hm LCTRL F   &kp G 		  &kp H		&hm RCTRL J           &hm RALT K    &hm RGUI L  &hm RSHFT SEMI  &clt 1 SQT 
+&clt 1 TAB        &hml LSHFT A  &hml LGUI S  &hml LALT D     &hml LCTRL F   &kp G 		  &kp H		&hmr RCTRL J           &hmr RALT K    &hmr RGUI L  &hmr RSHFT SEMI  &clt 1 SQT 
 &kp MINUS					&kp Z  &kp X	&kp C			&kp V   &kp B															&kp N		&kp M    &kp COMMA    &kp DOT       &kp FSLH  &kp ENTER
-																&kp LEFT  &kp DOWN  &kp SPACE												&kp SPACE  &kp UP &kp RIGHT
+																&kp LEFT  &kp DOWN  &hml LG(LA(LC(LSHFT))) SPACE												&hmr RG(RA(RC(RSHFT))) SPACE  &kp UP &kp RIGHT
             >;
         };
 
         lower_layer {
             display-name = "sym;";
             bindings = <
-&kp F12  &trans  &trans     &kp N1      &kp N2         &kp N3										  &kp LBKT       &kp RBKT  		  &kp F1     &kp F2     &trans          &kp DELETE
-&kp BSLH  &kp LS(BSLH)  &kp TILDE     &kp N4      &kp N5         &kp N6						&kp LS(LBKT)   &kp LS(RBKT)   &kp F3     &kp F4     &kp LS(EQUAL)   &kp EQUAL
-&trans  &trans      &trans         &kp N7      &kp N8         &kp N9							&kp LS(N9)     &kp LS(N0)   	&trans     &trans     &trans          &trans   
-																	 &kp DOT      &kp COMMA         &kp N0              &trans  &trans   &trans
+&kp F12  &trans  &trans											 AS(N1)    AS(N2)     AS(N3)										  &kp LBKT       &kp RBKT  		  &kp F1     &kp F2     &trans          &kp DELETE
+&kp BSLH  &hml LSHFT LS(BSLH)  &kp TILDE     AS(N4)    AS(N5)     AS(N6)						&kp LS(LBKT)   &kp LS(RBKT)   &kp F3     &kp F4     &hmr RSHFT RS(EQUAL)   &kp EQUAL
+&trans  &trans      &trans                   AS(N7)    AS(N8)		  AS(N9)							&kp LS(N9)     &kp LS(N0)   	&trans     &trans     &trans          &trans   
+																	 &kp DOT      &kp COMMA         AS(N0)              &trans  &trans   &trans
             >;
         };
 
