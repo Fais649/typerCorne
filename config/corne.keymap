@@ -31,7 +31,7 @@
 					tapping-term-ms = <280>;
 					quick-tap-ms = <175>;
 					bindings = <&kp>, <&kp>;
-					/* hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard */
+					/* hold-trigger-key-positions = <0>,<1>; // List of keys on the right side of the keyboard */
 					hold-trigger-on-release;
 			};
 
@@ -44,6 +44,17 @@
 					quick-tap-ms = <175>;
 					bindings = <&kp>, <&kp>;
 					/* hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard */
+					hold-trigger-on-release;
+			};
+
+			hm: home_row_mod_right {
+					compatible = "zmk,behavior-hold-tap";
+					#binding-cells = <2>;
+					flavor = "balanced";
+					require-prior-idle-ms = <180>;
+					tapping-term-ms = <280>;
+					quick-tap-ms = <250>;
+					bindings = <&kp>, <&kp>;
 					hold-trigger-on-release;
 			};
 
@@ -86,10 +97,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
             display-name = "core;";
             bindings = <
-&kp ESC           &kp Q  &kp W  &kp E     &kp R   &kp T                &kp Y                 &kp U           &kp I        &kp O         &kp P     &kp BACKSPACE
-&clt 1 TAB        		&kp A  &hml LGUI S  &hml LALT D     &hml LCTRL F   &hml LSHIFT G               &hmr RSHIFT H									&hmr RCTRL J           &hmr RALT K        &hmr RGUI L         &kp SEMI  &clt 1 SQT 
-&mlt LSHIFT MINUS     &kp Z  &kp X  &kp C     &kp V   &kp B           &kp N               &kp M           &kp COMMA    &kp DOT       &kp FSLH  &mlt RSHIFT ENTER
-		 							  &mlt LGUI LEFT &mlt LALT DOWN   &mlt LCTRL SPACE         &mlt RCTRL SPACE  &mlt RALT UP &mlt RGUI RIGHT
+&kp ESC           &kp Q  &kp W  &kp E     &kp R   &kp T														  &kp Y	  &kp U    &kp I        &kp O         &kp P     &kp BACKSPACE
+&clt 1 TAB        &hm LSHFT A  &hm LGUI S  &hm LALT D     &hm LCTRL F   &kp G 		  &kp H		&hm RCTRL J    &hm RALT K        &hm RGUI L         &hm RSHFT SEMI  &clt 1 SQT 
+&kp MINUS					&kp Z  &kp X	&kp C			&kp V   &kp B															&kp N		&kp M    &kp COMMA    &kp DOT       &kp FSLH  &kp ENTER
+																&kp LEFT  &kp DOWN  &kp SPACE												&kp SPACE  &kp UP &kp RIGHT
             >;
         };
 
