@@ -44,7 +44,7 @@
 			st: shift_tap {
 				compatible = "zmk,behavior-hold-tap";
 				#binding-cells = <2>;
-				flavor = "hold_preferred";
+				flavor = "hold-preferred";
 				quick-tap-ms = <QUICK_TAP_MS>;
 				tapping-term-ms = <200>;
 				bindings = <&kp>, <&kp>;
