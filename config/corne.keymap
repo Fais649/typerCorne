@@ -56,6 +56,7 @@
 				#binding-cells = <2>;
 				flavor = "hold-preferred";
 				quick-tap-ms = <QUICK_TAP_MS>;
+				require-prior-idle-ms = <150>;
 				tapping-term-ms = <200>;
 				bindings = <&kp>, <&kp>;
 				display-name = "SHIFT-Tap";
@@ -88,19 +89,19 @@
 			default_layer {
 				display-name = "base;";
 				bindings = <
-						 &kp ESC    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-						 &lt 1 TAB   &hml LGUI A &hml LALT S &hml LCTRL D &kp F &kp G   &kp H &kp J  &hmr RCTRL K     &hmr RALT L   &hmr RGUI SEMI &lt 1 SQT
-						 &hml LSHFT MINUS &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &hmr RSHFT EQUAL
-												&hml LGUI LEFT &hml LALT DOWN &lt 1 SPACE            &kp RET &hmr RALT UP &hmr RGUI RIGHT
+						 &kp ESC    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I   &kp O   &kp P    &kp BSPC
+						 &lt 1 TAB  &hml LGUI A &hml LALT S &hml LCTRL D &kp F  &kp G   &kp H   &kp J  &hmr RCTRL K     &hmr RALT L   &hmr RGUI SEMI &lt 1 SQT
+						 &st LSHFT MINUS &kp Z &kp X &kp C &kp V &kp B   &kp N  &kp M   &kp COMMA &kp DOT &kp FSLH &st RSHFT RET
+												&hml LGUI LEFT &hml LALT DOWN &lt 1 SPACE            &kp SPACE &hmr RALT UP &hmr RGUI RIGHT
 									>;
 				};
 			lower_layer {
 				display-name = "ext";
 				bindings = <
 						 &trans  &kp F1   &kp F2   &kp F3   &kp LBKT   &kp RBKT		  AS(N1)  AS(N2) AS(N3)  &trans &trans &trans
-						 &mo 2	 &kp F4   &kp F5   &kp F6   &kp LBRC   &kp RBRC     AS(N4)  AS(N5) AS(N6)  &trans &trans &mo 2
+						 &trans	 &kp F4   &kp F5   &kp F6   &kp LBRC   &kp RBRC     AS(N4)  AS(N5) AS(N6)  &trans AS(MINUS)  AS(EQUAL)
 						 &trans  &kp F7   &kp F8   &kp F9   &kp LS(N9) &kp LS(N0)   AS(N7)  AS(N8) AS(N9)  &trans &trans &trans
-																			 &kp TILDE &trans    &trans       &trans  &trans AS(N0)
+																			 &kp TILDE &trans    &mo 2      &trans  &trans AS(N0)
 								>;
 				};
 			raise_layer {
