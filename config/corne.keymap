@@ -45,8 +45,8 @@
 			lt: layer_tap {
 				compatible = "zmk,behavior-hold-tap";
 				#binding-cells = <2>;
-				flavor = "tap-preferred";
-				tapping-term-ms = <200>;
+				flavor = "balanced";
+				tapping-term-ms = <300>;
 				quick-tap-ms = <QUICK_TAP_MS>;
 				bindings = <&mo>, <&kp>;
 				display-name = "Layer-Tap";
@@ -65,7 +65,7 @@
 				#binding-cells = <2>;
 				flavor = "balanced";
 				quick-tap-ms = <QUICK_TAP_MS>;
-				tapping-term-ms = <250>;
+				tapping-term-ms = <300>;
 				bindings = <&kp>, <&kp>;
 			};
 		};
