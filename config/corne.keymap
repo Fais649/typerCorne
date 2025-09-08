@@ -56,31 +56,17 @@
 				#binding-cells = <2>;
 				flavor = "hold-preferred";
 				quick-tap-ms = <QUICK_TAP_MS>;
-				tapping-term-ms = <200>;
+				tapping-term-ms = <150>;
 				bindings = <&kp>, <&kp>;
-				display-name = "SHIFT-Tap";
+				display-name = "Shift-Tap";
 			};
-			hml: home_row_mod_left {
+			hm: home_row_mod_left {
 				compatible = "zmk,behavior-hold-tap";
 				#binding-cells = <2>;
 				flavor = "balanced";
 				quick-tap-ms = <QUICK_TAP_MS>;
-				require-prior-idle-ms = <100>;
-				tapping-term-ms = <300>;
+				tapping-term-ms = <250>;
 				bindings = <&kp>, <&kp>;
-				/* hold-trigger-key-positions = < KEYS_R THUMBS >;  */
-				hold-trigger-on-release;
-			};
-			hmr: home_row_mod_right {
-				compatible = "zmk,behavior-hold-tap";
-				#binding-cells = <2>;
-				flavor = "balanced";
-				require-prior-idle-ms = <100>;
-				tapping-term-ms = <280>;
-				quick-tap-ms = <QUICK_TAP_MS>;
-				bindings = <&kp>, <&kp>;
-				/* hold-trigger-key-positions = < KEYS_L THUMBS >; */
-				hold-trigger-on-release;
 			};
 		};
 		keymap {
@@ -89,9 +75,9 @@
 				display-name = "base;";
 				bindings = <
 						 &kp ESC    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I   &kp O   &kp P    &kp BSPC
-						 &hml LC(LS(LALT)) TAB  &kp A &kp S &kp D &kp F  &kp G   &kp H   &kp J  &kp K &kp L &kp SEMI &hmr RC(RS(RALT)) SQT
+						 &hm LC(LS(LALT)) TAB  &kp A &kp S &kp D &kp F  &kp G   &kp H   &kp J  &kp K &kp L &kp SEMI &hm RC(RS(RALT)) SQT
 						 &st LSHFT MINUS &kp Z &kp X &kp C &kp V &kp B   &kp N  &kp M   &kp COMMA &kp DOT &kp FSLH &st RSHFT RET
-												&hml LGUI LEFT &hml LCTRL DOWN &lt 1 SPACE            &lt 1 SPACE &hmr LALT UP &hmr RGUI RIGHT
+												&hm LGUI LEFT &hm LCTRL DOWN &lt 1 SPACE            &lt 1 SPACE &hm LALT UP &hm RGUI RIGHT
 									>;
 				};
 			lower_layer {
