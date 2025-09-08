@@ -50,13 +50,11 @@
         quick-release;
         ignore-modifiers;
       };
-      skhm: sticky_key_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        bindings = <&skq>, <&kp>;
-        release-after-ms = <1000>;
-        ignore-modifiers;
-      };
+      /* skhm: sticky_key_hold_tap { */
+      /*   compatible = "zmk,behavior-hold-tap"; */
+      /*   #binding-cells = <2>; */
+      /*   bindings = <&skq>, <&kp>; */
+      /* }; */
 		  as: auto_shift {
 				compatible = "zmk,behavior-hold-tap";
 				#binding-cells = <2>;
