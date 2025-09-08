@@ -68,7 +68,7 @@
 				require-prior-idle-ms = <100>;
 				tapping-term-ms = <300>;
 				bindings = <&kp>, <&kp>;
-				hold-trigger-key-positions = < KEYS_R THUMBS >; 
+				/* hold-trigger-key-positions = < KEYS_R THUMBS >;  */
 				hold-trigger-on-release;
 			};
 			hmr: home_row_mod_right {
@@ -79,7 +79,7 @@
 				tapping-term-ms = <280>;
 				quick-tap-ms = <QUICK_TAP_MS>;
 				bindings = <&kp>, <&kp>;
-				hold-trigger-key-positions = < KEYS_L THUMBS >;
+				/* hold-trigger-key-positions = < KEYS_L THUMBS >; */
 				hold-trigger-on-release;
 			};
 		};
