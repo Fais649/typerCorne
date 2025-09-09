@@ -23,17 +23,17 @@
         compatible = "zmk,combos";
         ae {
             timeout-ms = <50>;
-            key-positions = <3 13>;
+            key-positions = <22 13>;
             bindings = <&de_ae>;
         };
         ue {
             timeout-ms = <50>;
-            key-positions = <3 7>;
+            key-positions = <22 7>;
             bindings = <&de_ue>;
         };
         oe {
             timeout-ms = <50>;
-            key-positions = <3 9>;
+            key-positions = <22 9>;
             bindings = <&de_oe>;
         };
         combo_esc {
@@ -51,11 +51,6 @@
         quick-release;
         ignore-modifiers;
       };
-      /* skhm: sticky_key_hold_tap { */
-      /*   compatible = "zmk,behavior-hold-tap"; */
-      /*   #binding-cells = <2>; */
-      /*   bindings = <&skq>, <&kp>; */
-      /* }; */
 		  as: auto_shift {
 				compatible = "zmk,behavior-hold-tap";
 				#binding-cells = <2>;
@@ -105,16 +100,16 @@
 			default_layer {
 				display-name = "base;";
 				bindings = <
-						 &kp ESC &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I   &kp O   &kp P    &kp BSPC
-						 &hm LC(LS(LALT)) TAB  &kp A &kp S &kp D &kp F  &kp G   &kp H   &kp J  &kp K &kp L &kp SEMI &hm RC(RS(RALT)) SQT
-						 &st LSHFT MINUS &hm LCTL Z &kp X &kp C &kp V &kp B   &kp N  &kp M   &kp COMMA &kp DOT &hm RCTRL FSLH &st RSHFT RET
-												&hm LGUI LEFT &hm LALT DOWN &lt 1 SPACE            &lt 1 SPACE &hm RALT UP &hm RGUI RIGHT
+						 &lt 1 ESC &kp Q &kp W &kp E &kp R &kp T												&kp Y &kp U  &kp I   &kp O   &kp P    &kp BSPC
+						 &hm LC(LS(LALT)) TAB  &kp A &kp S &kp D &kp F  &kp G					&kp H   &kp J  &kp K &kp L &kp SEMI &hm RC(RS(RALT)) SQT
+						 &st LSHFT MINUS &kp Z &kp X &kp C &kp V &kp B						&kp N  &kp M   &kp COMMA &kp DOT &kp FSLH &st RSHFT RET
+												&hm LGUI LEFT &hm LALT DOWN &hm LCTRL SPACE            &lt 1 SPACE &hm RALT UP &hm RGUI RIGHT
 									>;
 				};
 			lower_layer {
 				display-name = "ext;";
 				bindings = <
-						 &trans  &kp F1   &kp F2   &kp F3   &kp LBKT   &kp RBKT		  AS(N1)  AS(N2) AS(N3)  &trans &trans &trans
+						 &caps_word  &kp F1   &kp F2   &kp F3   &kp LBKT   &kp RBKT		  AS(N1)  AS(N2) AS(N3)  &trans &trans &trans
 						 &mo 2	 &kp F4   &kp F5   &kp F6   &kp LBRC   &kp RBRC     AS(N4)  AS(N5) AS(N6)  &trans AS(MINUS)  AS(EQUAL)
 						 &trans  &kp F7   &kp F8   &kp F9   &kp LS(N9) &kp LS(N0)   AS(N7)  AS(N8) AS(N9)  &trans &trans &trans
 																			 &kp TILDE &trans    &trans      &trans  &trans AS(N0)
