@@ -94,14 +94,6 @@
 				tapping-term-ms = <300>;
 				bindings = <&kp>, <&kp>;
 			};
-			shm: home_row_mod_left {
-				compatible = "zmk,behavior-hold-tap";
-				#binding-cells = <2>;
-				flavor = "balanced";
-				quick-tap-ms = <QUICK_TAP_MS>;
-				tapping-term-ms = <300>;
-				bindings = <&kp>, <&sk>;
-			};
 		};
 		keymap {
 			compatible = "zmk,keymap";
