@@ -134,19 +134,19 @@
 			default_layer {
 				display-name = "base;";
 				bindings = <
-//        ┌──────────────┬───┬───┬───────────────┬───────────┬──────────────┐   ┌──────────────┬─────────┬───────────────┬───┬───┬──────────────┐
-//        │     esc      │ Q │ W │       E       │     R     │      T       │   │      Y       │    U    │       I       │ O │ P │     bspc     │
-//        ├──────────────┼───┼───┼───────────────┼───────────┼──────────────┤   ├──────────────┼─────────┼───────────────┼───┼───┼──────────────┤
-//        │ &hm lalt tab │ A │ S │       D       │     F     │      G       │   │      H       │    J    │       K       │ L │ ; │  &hm ralt '  │
-//        ├──────────────┼───┼───┼───────────────┼───────────┼──────────────┤   ├──────────────┼─────────┼───────────────┼───┼───┼──────────────┤
-//        │  &st lsft -  │ Z │ X │       C       │     V     │      B       │   │      N       │    M    │       ,       │ . │ / │ &st rsft ent │
-//        └──────────────┴───┴───┼───────────────┼───────────┼──────────────┤   ├──────────────┼─────────┼───────────────┼───┴───┴──────────────┘
-//                               │ &hm lgui left │ lt 1 down │ &hm lctl spc │   │ &hm rctl spc │ lt 1 up │ &hm rgui rght │
-//                               └───────────────┴───────────┴──────────────┘   └──────────────┴─────────┴───────────────┘
-      &kp ESC           &kp Q   &kp W   &kp E           &kp R        &kp T                 &kp Y             &kp U      &kp I            &kp O     &kp P      &kp BSPC
-      &hm LALT TAB      &kp A   &kp S   &kp D           &kp F        &kp G                 &kp H             &kp J      &kp K            &kp L     &kp SEMI   &hm RALT SQT
-      &st LSHFT MINUS   &kp Z   &kp X   &kp C           &kp V        &kp B                 &kp N             &kp M      &kp COMMA        &kp DOT   &kp FSLH   &st RSHFT RET
-                                        &hm LGUI LEFT   &lt 1 DOWN   &hm LCTRL SPACE       &hm RCTRL SPACE   &lt 1 UP   &hm RGUI RIGHT
+//        ┌──────────────┬───┬───┬───────────────┬───────────────┬──────────┐   ┌──────────┬─────────────┬───────────────┬───┬───┬──────────────┐
+//        │     esc      │ Q │ W │       E       │       R       │    T     │   │    Y     │      U      │       I       │ O │ P │     bspc     │
+//        ├──────────────┼───┼───┼───────────────┼───────────────┼──────────┤   ├──────────┼─────────────┼───────────────┼───┼───┼──────────────┤
+//        │ &hm lalt tab │ A │ S │       D       │       F       │    G     │   │    H     │      J      │       K       │ L │ ; │  &hm ralt '  │
+//        ├──────────────┼───┼───┼───────────────┼───────────────┼──────────┤   ├──────────┼─────────────┼───────────────┼───┼───┼──────────────┤
+//        │  &st lsft -  │ Z │ X │       C       │       V       │    B     │   │    N     │      M      │       ,       │ . │ / │ &st rsft ent │
+//        └──────────────┴───┴───┼───────────────┼───────────────┼──────────┤   ├──────────┼─────────────┼───────────────┼───┴───┴──────────────┘
+//                               │ &hm lgui left │ &hm lctl down │ lt 1 spc │   │ lt 1 spc │ &hm rctl up │ &hm rgui rght │
+//                               └───────────────┴───────────────┴──────────┘   └──────────┴─────────────┴───────────────┘
+      &kp ESC           &kp Q   &kp W   &kp E           &kp R            &kp T             &kp Y         &kp U          &kp I            &kp O     &kp P      &kp BSPC
+      &hm LALT TAB      &kp A   &kp S   &kp D           &kp F            &kp G             &kp H         &kp J          &kp K            &kp L     &kp SEMI   &hm RALT SQT
+      &st LSHFT MINUS   &kp Z   &kp X   &kp C           &kp V            &kp B             &kp N         &kp M          &kp COMMA        &kp DOT   &kp FSLH   &st RSHFT RET
+                                        &hm LGUI LEFT   &hm LCTRL DOWN   &lt 1 SPACE       &lt 1 SPACE   &hm RCTRL UP   &hm RGUI RIGHT
 									>;
 				};
 			lower_layer {
