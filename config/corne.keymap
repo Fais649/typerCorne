@@ -85,14 +85,6 @@
 				flavor = "tap-preferred";
 				bindings = <&shifted>, <&kp>;
 			};
-			/*  as: auto_shift { */
-			/* 	compatible = "zmk,behavior-hold-tap"; */
-			/* 	#binding-cells = <2>; */
-			/* 	tapping_term_ms = <135>; */
-			/* 	quick-tap-ms = <QUICK_TAP_MS>; */
-			/* 	flavor = "tap-preferred"; */
-			/* 	bindings = <&kp>, <&kp>; */
-			/* }; */
 			mt: mod_tap {
 				compatible = "zmk,behavior-hold-tap";
 				#binding-cells = <2>;
