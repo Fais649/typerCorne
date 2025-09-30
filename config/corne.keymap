@@ -155,44 +155,44 @@
 									>;
 				};
 			lower_layer {
-				display-name = "ext;";
+				display-name = "num;";
 				bindings = <
-//        ┌───────┬─────┬─────┬─────┬─────┬─────────┐   ┌─────────┬───────┬───────┬───────┬───────┬───────┐
-//        │ mo 2  │  1  │  2  │  3  │  4  │    5    │   │  &as 6  │ &as 7 │ &as 8 │ &as 9 │ &as 0 │       │
-//        ├───────┼─────┼─────┼─────┼─────┼─────────┤   ├─────────┼───────┼───────┼───────┼───────┼───────┤
-//        │ &as ` │     │     │  [  │  {  │ lsft(9) │   │ lsft(0) │   }   │   ]   │       │ &as ~ │ &as = │
-//        ├───────┼─────┼─────┼─────┼─────┼─────────┤   ├─────────┼───────┼───────┼───────┼───────┼───────┤
-//        │       │ f1  │ f2  │ f3  │ f4  │   f5    │   │   f6    │  f7   │  f8   │   |   │ &as \ │       │
-//        └───────┴─────┴─────┼─────┼─────┼─────────┤   ├─────────┼───────┼───────┼───────┴───────┴───────┘
-//                            │     │     │         │   │         │       │       │
-//                            └─────┴─────┴─────────┘   └─────────┴───────┴───────┘
-      &mo 2       &kp N1   &kp N2   &kp N3     &kp N4     &kp N5           &as N6       &as N7     &as N8     &as N9     &as N0      &trans
-      &as GRAVE   &trans   &trans   &kp LBKT   &kp LBRC   &kp LS(N9)       &kp LS(N0)   &kp RBRC   &kp RBKT   &trans     &as TILDE   &as EQUAL
-      &trans      &kp F1   &kp F2   &kp F3     &kp F4     &kp F5           &kp F6       &kp F7     &kp F8     &kp PIPE   &as BSLH    &trans
-                                    &trans     &trans     &trans           &trans       &trans     &trans
+//        ┌────┬────┬────┬──────┬───────┬───────┐   ┌───────┬───────┬───────┬─────┬───────┬───────┐
+//        │ f1 │ f2 │ f3 │ f10  │ &as [ │ &as ] │   │ &as 1 │ &as 2 │ &as 3 │     │       │       │
+//        ├────┼────┼────┼──────┼───────┼───────┤   ├───────┼───────┼───────┼─────┼───────┼───────┤
+//        │ f4 │ f5 │ f6 │ f11  │ &as { │ &as } │   │ &as 4 │ &as 5 │ &as 6 │     │ &as ` │ &as = │
+//        ├────┼────┼────┼──────┼───────┼───────┤   ├───────┼───────┼───────┼─────┼───────┼───────┤
+//        │ f7 │ f8 │ f9 │ f12  │ &as ( │ &as ) │   │ &as 7 │ &as 8 │ &as 9 │     │ &as \ │       │
+//        └────┴────┴────┼──────┼───────┼───────┤   ├───────┼───────┼───────┼─────┴───────┴───────┘
+//                       │ mo 2 │       │       │   │ &as 0 │       │ mo 2  │
+//                       └──────┴───────┴───────┘   └───────┴───────┴───────┘
+      &kp F1   &kp F2   &kp F3   &kp F10   &as LBKT   &as RBKT       &as N1   &as N2   &as N3   &trans   &trans      &trans
+      &kp F4   &kp F5   &kp F6   &kp F11   &as LBRC   &as RBRC       &as N4   &as N5   &as N6   &trans   &as GRAVE   &as EQUAL
+      &kp F7   &kp F8   &kp F9   &kp F12   &as LPAR   &as RPAR       &as N7   &as N8   &as N9   &trans   &as BSLH    &trans
+                                 &mo 2     &trans     &trans         &as N0   &trans   &mo 2
 								>;
 				};
 			raise_layer {
-				display-name = "cmd;";
+				display-name = "move;";
 				bindings = <
 //        ┌────────┬──────────┬──────────┬──────────┬──────────┬──────────┐   ┌──────┬──────┬──────┬──────┬─────┬──────┐
 //        │        │          │          │          │          │          │   │      │      │      │      │     │      │
 //        ├────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────┼──────┼──────┼──────┼─────┼──────┤
-//        │ bt_clr │ bt_sel 0 │ bt_sel 1 │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │   │ vold │ bri- │ bri+ │ volu │     │      │
+//        │ bt_clr │ bt_sel 0 │ bt_sel 1 │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │   │ vold │ bri- │ bri+ │ volu │     │ play │
 //        ├────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────┼──────┼──────┼──────┼─────┼──────┤
-//        │        │          │          │          │          │          │   │      │      │      │      │     │ play │
+//        │        │          │          │          │          │          │   │      │      │      │      │     │      │
 //        └────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────┼──────┼──────┼──────┴─────┴──────┘
 //                                       │          │          │          │   │      │      │      │
 //                                       └──────────┴──────────┴──────────┘   └──────┴──────┴──────┘
       &trans       &trans         &trans         &trans         &trans         &trans             &trans         &trans         &trans          &trans         &trans   &trans
-      &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4       &kp C_VOL_DN   &kp C_BRI_DN   &kp C_BRI_INC   &kp C_VOL_UP   &trans   &trans
-      &trans       &trans         &trans         &trans         &trans         &trans             &trans         &trans         &trans          &trans         &trans   &kp C_PP
+      &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4       &kp C_VOL_DN   &kp C_BRI_DN   &kp C_BRI_INC   &kp C_VOL_UP   &trans   &kp C_PP
+      &trans       &trans         &trans         &trans         &trans         &trans             &trans         &trans         &trans          &trans         &trans   &trans
                                                  &trans         &trans         &trans             &trans         &trans         &trans
 								>;
 				};
 			extra_1 {
 					status = "reserved";
-				};
+			};
 			extra_2 {
 					status = "reserved";
 				};
