@@ -67,6 +67,19 @@
             key-positions = <1 2>;
             bindings = <&kp ESC>;
         };
+
+
+        combo_1 {
+            timeout-ms = <50>;
+            key-positions = <19 1>;
+            bindings = <&kp N1>;
+        };
+
+        combo_2 {
+            timeout-ms = <50>;
+            key-positions = <19 2>;
+            bindings = <&kp N2>;
+        };
     };
 		behaviors {
       skq: sticky_key_quick_release {
