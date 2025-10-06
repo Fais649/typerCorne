@@ -164,12 +164,12 @@
 //        ├─────────────┼────┼────┼─────┼───────┼───────┤   ├───────┼───────┼───────┼─────┼───────┼───────────┤
 //        │ &st lsft f7 │ f8 │ f9 │ f12 │ &as ( │ &as ) │   │ &as 7 │ &as 8 │ &as 9 │     │ &as \ │           │
 //        └─────────────┴────┴────┼─────┼───────┼───────┤   ├───────┼───────┼───────┼─────┴───────┴───────────┘
-//                                │     │       │       │   │ &as 0 │       │       │
+//                                │     │       │       │   │       │       │ &as 0 │
 //                                └─────┴───────┴───────┘   └───────┴───────┴───────┘
       &lt 2 F1       &kp F2   &kp F3   &kp F10   &as LBKT   &as RBKT       &as N1   &as N2   &as N3   &trans   &trans      &lt 2 BSPC
       &hm LALT F4    &kp F5   &kp F6   &kp F11   &as LBRC   &as RBRC       &as N4   &as N5   &as N6   &trans   &as GRAVE   &as EQUAL
       &st LSHFT F7   &kp F8   &kp F9   &kp F12   &as LPAR   &as RPAR       &as N7   &as N8   &as N9   &trans   &as BSLH    &trans
-                                       &trans    &trans     &trans         &as N0   &trans   &trans
+                                       &trans    &trans     &trans         &trans   &trans   &as N0
 								>;
 				};
 			raise_layer {
