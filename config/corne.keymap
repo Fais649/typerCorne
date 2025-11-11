@@ -146,19 +146,19 @@
 //        ├──────────────┼───┼───┼───────────────┼───────────────┼──────────┤   ├──────────┼─────────────┼───────────────┼───┼───┼──────────────┤
 //        │  &st lsft -  │ Z │ X │       C       │       V       │    B     │   │    N     │      M      │       ,       │ . │ / │ &st rsft ent │
 //        └──────────────┴───┴───┼───────────────┼───────────────┼──────────┤   ├──────────┼─────────────┼───────────────┼───┴───┴──────────────┘
-//                               │ &hm lgui left │ &hm lctl down │ lt 1 spc │   │ lt 1 spc │ &hm rctl up │ &hm rgui rght │
+//                               │ &hm lgui left │ &hm lctl down │ lt 1 spc │   │ lt 2 spc │ &hm rctl up │ &hm rgui rght │
 //                               └───────────────┴───────────────┴──────────┘   └──────────┴─────────────┴───────────────┘
       &kp ESC           &kp Q   &kp W   &kp E           &kp R            &kp T             &kp Y         &kp U          &kp I            &kp O     &kp P      &kp BSPC
       &hm LALT TAB      &kp A   &kp S   &kp D           &kp F            &kp G             &kp H         &kp J          &kp K            &kp L     &kp SEMI   &hm RALT SQT
       &st LSHFT MINUS   &kp Z   &kp X   &kp C           &kp V            &kp B             &kp N         &kp M          &kp COMMA        &kp DOT   &kp FSLH   &st RSHFT RET
-                                        &hm LGUI LEFT   &hm LCTRL DOWN   &lt 1 SPACE       &lt 1 SPACE   &hm RCTRL UP   &hm RGUI RIGHT
+                                        &hm LGUI LEFT   &hm LCTRL DOWN   &lt 1 SPACE       &lt 2 SPACE   &hm RCTRL UP   &hm RGUI RIGHT
 									>;
 				};
 			lower_layer {
 				display-name = "num;";
 				bindings = <
 //        ┌─────────────┬────┬────┬─────┬───────┬───────┐   ┌───────┬───────┬───────┬─────┬───────┬───────────┐
-//        │   lt 2 f1   │ f2 │ f3 │ f10 │ &as [ │ &as ] │   │ &as 1 │ &as 2 │ &as 3 │     │       │ lt 2 bspc │
+//        │     f1      │ f2 │ f3 │ f10 │ &as [ │ &as ] │   │ &as 1 │ &as 2 │ &as 3 │     │       │ lt 2 bspc │
 //        ├─────────────┼────┼────┼─────┼───────┼───────┤   ├───────┼───────┼───────┼─────┼───────┼───────────┤
 //        │ &hm lalt f4 │ f5 │ f6 │ f11 │ &as { │ &as } │   │ &as 4 │ &as 5 │ &as 6 │     │ &as ` │   &as =   │
 //        ├─────────────┼────┼────┼─────┼───────┼───────┤   ├───────┼───────┼───────┼─────┼───────┼───────────┤
@@ -166,7 +166,7 @@
 //        └─────────────┴────┴────┼─────┼───────┼───────┤   ├───────┼───────┼───────┼─────┴───────┴───────────┘
 //                                │     │       │       │   │       │       │ &as 0 │
 //                                └─────┴───────┴───────┘   └───────┴───────┴───────┘
-      &lt 2 F1       &kp F2   &kp F3   &kp F10   &as LBKT   &as RBKT       &as N1   &as N2   &as N3   &trans   &trans      &lt 2 BSPC
+      &kp F1         &kp F2   &kp F3   &kp F10   &as LBKT   &as RBKT       &as N1   &as N2   &as N3   &trans   &trans      &lt 2 BSPC
       &hm LALT F4    &kp F5   &kp F6   &kp F11   &as LBRC   &as RBRC       &as N4   &as N5   &as N6   &trans   &as GRAVE   &as EQUAL
       &st LSHFT F7   &kp F8   &kp F9   &kp F12   &as LPAR   &as RPAR       &as N7   &as N8   &as N9   &trans   &as BSLH    &trans
                                        &trans    &trans     &trans         &trans   &trans   &as N0
@@ -175,19 +175,19 @@
 			raise_layer {
 				display-name = "move;";
 				bindings = <
-//        ┌────────┬──────────┬──────────┬──────────┬──────────┬──────────┐   ┌──────┬──────┬──────┬──────┬─────┬──────┐
-//        │        │          │          │          │          │          │   │      │      │      │      │     │      │
-//        ├────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────┼──────┼──────┼──────┼─────┼──────┤
-//        │ bt_clr │ bt_sel 0 │ bt_sel 1 │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │   │ vold │ bri- │ bri+ │ volu │     │ play │
-//        ├────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────┼──────┼──────┼──────┼─────┼──────┤
-//        │        │          │          │          │          │          │   │      │      │      │      │     │      │
-//        └────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────┼──────┼──────┼──────┴─────┴──────┘
-//                                       │          │          │          │   │      │      │      │
-//                                       └──────────┴──────────┴──────────┘   └──────┴──────┴──────┘
-      &trans       &trans         &trans         &trans         &trans         &trans             &trans         &trans         &trans          &trans         &trans   &trans
-      &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4       &kp C_VOL_DN   &kp C_BRI_DN   &kp C_BRI_INC   &kp C_VOL_UP   &trans   &kp C_PP
-      &trans       &trans         &trans         &trans         &trans         &trans             &trans         &trans         &trans          &trans         &trans   &trans
-                                                 &trans         &trans         &trans             &trans         &trans         &trans
+//        ┌────────┬──────────┬──────────┬──────────┬──────────┬──────────┐   ┌─────────┬─────────┬─────────┬──────┬──────┬──────┐
+//        │        │          │          │          │          │          │   │ lsft(1) │ lsft(2) │ lsft(3) │ bri- │ vold │      │
+//        ├────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├─────────┼─────────┼─────────┼──────┼──────┼──────┤
+//        │ bt_clr │ bt_sel 0 │ bt_sel 1 │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │   │ lsft(4) │ lsft(5) │ lsft(6) │ bri+ │ volu │ play │
+//        ├────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├─────────┼─────────┼─────────┼──────┼──────┼──────┤
+//        │        │          │          │          │          │          │   │ lsft(7) │ lsft(8) │         │      │      │      │
+//        └────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├─────────┼─────────┼─────────┼──────┴──────┴──────┘
+//                                       │          │          │          │   │         │         │         │
+//                                       └──────────┴──────────┴──────────┘   └─────────┴─────────┴─────────┘
+      &trans       &trans         &trans         &trans         &trans         &trans             &kp LS(N1)   &kp LS(N2)   &kp LS(N3)   &kp C_BRI_DN    &kp C_VOL_DN   &trans
+      &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4       &kp LS(N4)   &kp LS(N5)   &kp LS(N6)   &kp C_BRI_INC   &kp C_VOL_UP   &kp C_PP
+      &trans       &trans         &trans         &trans         &trans         &trans             &kp LS(N7)   &kp LS(N8)   &trans       &trans          &trans         &trans
+                                                 &trans         &trans         &trans             &trans       &trans       &trans
 								>;
 				};
 			extra_1 {
