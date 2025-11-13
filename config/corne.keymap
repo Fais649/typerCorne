@@ -157,19 +157,19 @@
 			lower_layer {
 				display-name = "numbers;";
 				bindings = <
-//        ┌─────────────┬────┬────┬─────┬───────┬───────┐   ┌───────┬───────┬───────┬─────┬───────┬───────┐
-//        │     f1      │ f2 │ f3 │ f10 │ &as [ │ &as ] │   │ &as 1 │ &as 2 │ &as 3 │     │       │       │
-//        ├─────────────┼────┼────┼─────┼───────┼───────┤   ├───────┼───────┼───────┼─────┼───────┼───────┤
-//        │ &hm lalt f4 │ f5 │ f6 │ f11 │ &as { │ &as } │   │ &as 4 │ &as 5 │ &as 6 │     │ &as ` │ &as = │
-//        ├─────────────┼────┼────┼─────┼───────┼───────┤   ├───────┼───────┼───────┼─────┼───────┼───────┤
-//        │ &st lsft f7 │ f8 │ f9 │ f12 │ &as ( │ &as ) │   │ &as 7 │ &as 8 │ &as 9 │     │ &as \ │       │
-//        └─────────────┴────┴────┼─────┼───────┼───────┤   ├───────┼───────┼───────┼─────┴───────┴───────┘
-//                                │     │       │       │   │ mt 3  │       │ &as 0 │
-//                                └─────┴───────┴───────┘   └───────┴───────┴───────┘
-      &kp F1         &kp F2   &kp F3   &kp F10   &as LBKT   &as RBKT       &as N1   &as N2   &as N3   &trans   &trans      &trans
-      &hm LALT F4    &kp F5   &kp F6   &kp F11   &as LBRC   &as RBRC       &as N4   &as N5   &as N6   &trans   &as GRAVE   &as EQUAL
-      &st LSHFT F7   &kp F8   &kp F9   &kp F12   &as LPAR   &as RPAR       &as N7   &as N8   &as N9   &trans   &as BSLH    &trans
-                                       &trans    &trans     &trans         &mt 3    &trans   &as N0
+//        ┌─────┬─────┬─────┬─────┬───────┬───────┐   ┌───────┬───────┬───────┬─────┬───────┬───────┐
+//        │     │     │     │     │ &as [ │ &as ] │   │ &as 1 │ &as 2 │ &as 3 │     │       │       │
+//        ├─────┼─────┼─────┼─────┼───────┼───────┤   ├───────┼───────┼───────┼─────┼───────┼───────┤
+//        │     │     │     │     │ &as { │ &as } │   │ &as 4 │ &as 5 │ &as 6 │     │ &as ` │ &as = │
+//        ├─────┼─────┼─────┼─────┼───────┼───────┤   ├───────┼───────┼───────┼─────┼───────┼───────┤
+//        │     │     │     │     │ &as ( │ &as ) │   │ &as 7 │ &as 8 │ &as 9 │     │ &as \ │       │
+//        └─────┴─────┴─────┼─────┼───────┼───────┤   ├───────┼───────┼───────┼─────┴───────┴───────┘
+//                          │     │       │       │   │ mo 3  │       │ &as 0 │
+//                          └─────┴───────┴───────┘   └───────┴───────┴───────┘
+      &trans   &trans   &trans   &trans   &as LBKT   &as RBKT       &as N1   &as N2   &as N3   &trans   &trans      &trans
+      &trans   &trans   &trans   &trans   &as LBRC   &as RBRC       &as N4   &as N5   &as N6   &trans   &as GRAVE   &as EQUAL
+      &trans   &trans   &trans   &trans   &as LPAR   &as RPAR       &as N7   &as N8   &as N9   &trans   &as BSLH    &trans
+                                 &trans   &trans     &trans         &mo 3    &trans   &as N0
 								>;
 				};
 			raise_layer {
@@ -182,12 +182,12 @@
 //        ├─────────────┼────┼────┼─────┼───────┼───────┤   ├─────────┼─────────┼─────────┼─────┼─────────┼─────────┤
 //        │ &st lsft f7 │ f8 │ f9 │ f12 │ &as ( │ &as ) │   │ lsft(7) │ lsft(8) │         │     │ lsft(\) │         │
 //        └─────────────┴────┴────┼─────┼───────┼───────┤   ├─────────┼─────────┼─────────┼─────┴─────────┴─────────┘
-//                                │     │       │ mt 3  │   │         │         │         │
+//                                │     │       │ mo 3  │   │         │         │         │
 //                                └─────┴───────┴───────┘   └─────────┴─────────┴─────────┘
       &kp F1         &kp F2   &kp F3   &kp F10   &as LBKT   &as RBKT       &kp LS(N1)   &kp LS(N2)   &kp LS(N3)   &trans   &trans          &trans
       &hm LALT F4    &kp F5   &kp F6   &kp F11   &as LBRC   &as RBRC       &kp LS(N4)   &kp LS(N5)   &kp LS(N6)   &trans   &kp LS(GRAVE)   &kp LS(EQUAL)
       &st LSHFT F7   &kp F8   &kp F9   &kp F12   &as LPAR   &as RPAR       &kp LS(N7)   &kp LS(N8)   &trans       &trans   &kp LS(BSLH)    &trans
-                                       &trans    &trans     &mt 3          &trans       &trans       &trans
+                                       &trans    &trans     &mo 3          &trans       &trans       &trans
 								>;
 				};
 			extra_1 {
