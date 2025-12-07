@@ -117,9 +117,9 @@
 			st: shift_tap {
 				compatible = "zmk,behavior-hold-tap";
 				#binding-cells = <2>;
-				flavor = "balanced";
+				flavor = "hold-preferred";
 				quick-tap-ms = <QUICK_TAP_MS>;
-				tapping-term-ms = <150>;
+				tapping-term-ms = <300>;
 				bindings = <&kp>, <&kp>;
 				display-name = "Shift-Tap";
 			};
@@ -137,19 +137,19 @@
 			default_layer {
 				display-name = "base;";
 				bindings = <
-//        ┌──────────────┬───┬───┬───────────────┬───────────────┬──────────┐   ┌──────────┬─────────────┬───────────────┬───┬───┬──────────────┐
-//        │     esc      │ Q │ W │       E       │       R       │    T     │   │    Y     │      U      │       I       │ O │ P │     bspc     │
-//        ├──────────────┼───┼───┼───────────────┼───────────────┼──────────┤   ├──────────┼─────────────┼───────────────┼───┼───┼──────────────┤
-//        │ &hm lalt tab │ A │ S │       D       │       F       │    G     │   │    H     │      J      │       K       │ L │ ; │  &hm ralt '  │
-//        ├──────────────┼───┼───┼───────────────┼───────────────┼──────────┤   ├──────────┼─────────────┼───────────────┼───┼───┼──────────────┤
-//        │  &st lsft -  │ Z │ X │       C       │       V       │    B     │   │    N     │      M      │       ,       │ . │ / │ &st rsft ent │
-//        └──────────────┴───┴───┼───────────────┼───────────────┼──────────┤   ├──────────┼─────────────┼───────────────┼───┴───┴──────────────┘
-//                               │ &hm lgui left │ &hm lctl down │ lt 1 spc │   │ lt 2 spc │ &hm rctl up │ &hm rgui rght │
-//                               └───────────────┴───────────────┴──────────┘   └──────────┴─────────────┴───────────────┘
-      &kp ESC           &kp Q   &kp W   &kp E           &kp R            &kp T             &kp Y         &kp U          &kp I            &kp O     &kp P      &kp BSPC
-      &hm LALT TAB      &kp A   &kp S   &kp D           &kp F            &kp G             &kp H         &kp J          &kp K            &kp L     &kp SEMI   &hm RALT SQT
-      &st LSHFT MINUS   &kp Z   &kp X   &kp C           &kp V            &kp B             &kp N         &kp M          &kp COMMA        &kp DOT   &kp FSLH   &st RSHFT RET
-                                        &hm LGUI LEFT   &hm LCTRL DOWN   &lt 1 SPACE       &lt 2 SPACE   &hm RCTRL UP   &hm RGUI RIGHT
+//        ┌──────────────┬───┬───┬──────┬──────┬──────────┐   ┌──────────┬──────┬──────┬───┬───┬──────────────┐
+//        │     esc      │ Q │ W │  E   │  R   │    T     │   │    Y     │  U   │  I   │ O │ P │     bspc     │
+//        ├──────────────┼───┼───┼──────┼──────┼──────────┤   ├──────────┼──────┼──────┼───┼───┼──────────────┤
+//        │ &hm lalt tab │ A │ S │  D   │  F   │    G     │   │    H     │  J   │  K   │ L │ ; │  &hm ralt '  │
+//        ├──────────────┼───┼───┼──────┼──────┼──────────┤   ├──────────┼──────┼──────┼───┼───┼──────────────┤
+//        │  &st lsft -  │ Z │ X │  C   │  V   │    B     │   │    N     │  M   │  ,   │ . │ / │ &st rsft ent │
+//        └──────────────┴───┴───┼──────┼──────┼──────────┤   ├──────────┼──────┼──────┼───┴───┴──────────────┘
+//                               │ lgui │ lctl │ lt 1 spc │   │ lt 2 spc │ rctl │ rgui │
+//                               └──────┴──────┴──────────┘   └──────────┴──────┴──────┘
+      &kp ESC           &kp Q   &kp W   &kp E      &kp R       &kp T             &kp Y         &kp U       &kp I       &kp O     &kp P      &kp BSPC
+      &hm LALT TAB      &kp A   &kp S   &kp D      &kp F       &kp G             &kp H         &kp J       &kp K       &kp L     &kp SEMI   &hm RALT SQT
+      &st LSHFT MINUS   &kp Z   &kp X   &kp C      &kp V       &kp B             &kp N         &kp M       &kp COMMA   &kp DOT   &kp FSLH   &st RSHIFT RET
+                                        &kp LGUI   &kp LCTRL   &lt 1 SPACE       &lt 2 SPACE   &kp RCTRL   &kp RGUI
 									>;
 				};
 			lower_layer {
@@ -173,19 +173,19 @@
 			raise_layer {
 				display-name = "symbols;";
 				bindings = <
-//        ┌─────────────┬────┬────┬─────┬───────┬──────────┐   ┌─────────┬─────────┬─────────┬─────┬─────────┬─────────┐
-//        │     f1      │ f2 │ f3 │ f10 │ &as [ │  &as ]   │   │ lsft(1) │ lsft(2) │ lsft(3) │     │         │         │
-//        ├─────────────┼────┼────┼─────┼───────┼──────────┤   ├─────────┼─────────┼─────────┼─────┼─────────┼─────────┤
-//        │ &hm lalt f4 │ f5 │ f6 │ f11 │ &as { │  &as }   │   │ lsft(4) │ lsft(5) │ lsft(6) │     │ lsft(`) │ lsft(=) │
-//        ├─────────────┼────┼────┼─────┼───────┼──────────┤   ├─────────┼─────────┼─────────┼─────┼─────────┼─────────┤
-//        │ &st lsft f7 │ f8 │ f9 │ f12 │ &as ( │  &as )   │   │ lsft(7) │ lsft(8) │         │     │ lsft(\) │         │
-//        └─────────────┴────┴────┼─────┼───────┼──────────┤   ├─────────┼─────────┼─────────┼─────┴─────────┴─────────┘
-//                                │     │       │ lt 3 spc │   │         │         │         │
-//                                └─────┴───────┴──────────┘   └─────────┴─────────┴─────────┘
-      &kp F1         &kp F2   &kp F3   &kp F10   &as LBKT   &as RBKT          &kp LS(N1)   &kp LS(N2)   &kp LS(N3)   &trans   &trans          &trans
-      &hm LALT F4    &kp F5   &kp F6   &kp F11   &as LBRC   &as RBRC          &kp LS(N4)   &kp LS(N5)   &kp LS(N6)   &trans   &kp LS(GRAVE)   &kp LS(EQUAL)
-      &st LSHFT F7   &kp F8   &kp F9   &kp F12   &as LPAR   &as RPAR          &kp LS(N7)   &kp LS(N8)   &trans       &trans   &kp LS(BSLH)    &trans
-                                       &trans    &trans     &lt 3 SPACE       &trans       &trans       &trans
+//        ┌─────────────┬────┬────┬─────┬───────┬──────────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
+//        │     f1      │ f2 │ f3 │ f10 │ &as [ │  &as ]   │   │      │      │     │      │     │     │
+//        ├─────────────┼────┼────┼─────┼───────┼──────────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//        │ &hm lalt f4 │ f5 │ f6 │ f11 │ &as { │  &as }   │   │ left │ down │ up  │ rght │     │     │
+//        ├─────────────┼────┼────┼─────┼───────┼──────────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//        │ &st lsft f7 │ f8 │ f9 │ f12 │ &as ( │  &as )   │   │      │      │     │      │     │     │
+//        └─────────────┴────┴────┼─────┼───────┼──────────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
+//                                │     │       │ lt 3 spc │   │      │      │     │
+//                                └─────┴───────┴──────────┘   └──────┴──────┴─────┘
+      &kp F1         &kp F2   &kp F3   &kp F10   &as LBKT   &as RBKT          &trans     &trans     &trans   &trans      &trans   &trans
+      &hm LALT F4    &kp F5   &kp F6   &kp F11   &as LBRC   &as RBRC          &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &trans   &trans
+      &st LSHFT F7   &kp F8   &kp F9   &kp F12   &as LPAR   &as RPAR          &trans     &trans     &trans   &trans      &trans   &trans
+                                       &trans    &trans     &lt 3 SPACE       &trans     &trans     &trans
 								>;
 				};
 			extra_1 {
