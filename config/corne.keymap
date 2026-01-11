@@ -191,18 +191,18 @@
 			extra_1 {
 				display-name = "settings;";
 				bindings = <
-//        ┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌──────────┬──────────┬──────────┬──────────┬──────┬─────┐
-//        │     │     │     │     │     │     │   │ bt_sel 1 │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │      │     │
-//        ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────────┼──────────┼──────────┼──────────┼──────┼─────┤
-//        │     │     │     │     │     │     │   │   vold   │   bri-   │   bri+   │   volu   │ play │     │
-//        ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────────┼──────────┼──────────┼──────────┼──────┼─────┤
-//        │     │     │     │     │     │     │   │          │          │          │          │      │     │
-//        └─────┴─────┴─────┼─────┼─────┼─────┤   ├──────────┼──────────┼──────────┼──────────┴──────┴─────┘
+//        ┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌──────────┬──────────┬──────────┬──────────┬──────────┬────────┐
+//        │     │     │     │     │     │     │   │ bt_sel 0 │ bt_sel 1 │ bt_sel 2 │ bt_sel 3 │ bt_sel 4 │ bt_clr │
+//        ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼────────┤
+//        │     │     │     │     │     │     │   │   vold   │   bri-   │   bri+   │   volu   │   play   │        │
+//        ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼────────┤
+//        │     │     │     │     │     │     │   │          │          │          │          │          │        │
+//        └─────┴─────┴─────┼─────┼─────┼─────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴────────┘
 //                          │     │     │     │   │          │          │          │
 //                          └─────┴─────┴─────┘   └──────────┴──────────┴──────────┘
-      &trans   &trans   &trans   &trans   &trans   &trans       &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4   &trans     &trans
-      &trans   &trans   &trans   &trans   &trans   &trans       &kp C_VOL_DN   &kp C_BRI_DN   &kp C_BRI_INC   &kp C_VOL_UP   &kp C_PP   &trans
-      &trans   &trans   &trans   &trans   &trans   &trans       &trans         &trans         &trans          &trans         &trans     &trans
+      &trans   &trans   &trans   &trans   &trans   &trans       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR
+      &trans   &trans   &trans   &trans   &trans   &trans       &kp C_VOL_DN   &kp C_BRI_DN   &kp C_BRI_INC   &kp C_VOL_UP   &kp C_PP       &trans
+      &trans   &trans   &trans   &trans   &trans   &trans       &trans         &trans         &trans          &trans         &trans         &trans
                                  &trans   &trans   &trans       &trans         &trans         &trans
 								>;
 				
@@ -214,4 +214,4 @@
 					status = "reserved";
 				};
 		};
-};
+};trans
